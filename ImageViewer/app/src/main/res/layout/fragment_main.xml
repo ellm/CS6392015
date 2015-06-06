@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:layout_alignBottom="@+id/next"
+        android:layout_alignParentTop="true" />
+    <Button
+        android:id="@+id/prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/prev_string"
+        android:textColor="@android:color/white"/>
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/next_string"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_toLeftOf="@id/next"
+        android:layout_toRightOf="@id/prev"
+        android:layout_alignBottom="@id/prev"
+        android:layout_alignTop="@id/prev"
+        android:text="Sharks"
+        android:textColor="@android:color/white"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/prev"
+        android:scaleType="centerCrop"
+        android:src="@drawable/android_shark_1080x1920"/>
+
+</RelativeLayout>

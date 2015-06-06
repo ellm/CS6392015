@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">"Sharks! "</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="prev_string">Previous</string>
+    <string name="next_string">Next</string>
+    <string name="action_settings">Settings</string>
+</resources>
