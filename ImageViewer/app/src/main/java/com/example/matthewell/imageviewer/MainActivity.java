@@ -4,6 +4,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -35,5 +39,25 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private int mrePhotoIndex = 0;
+    private int[] mrePhotoID = new int[] { R.drawable.android_shark_1080x1920,
+            R.drawable.android_shark_gw, R.drawable.android_shark_kp, R.drawable.android_shark_mango,
+            R.drawable.android_shark_openl };
+
+    private void showPhoto(int PhotoIndex) {
+        ImageView imageView = (ImageView) findViewById(R.id.image_view);
+        imageView.setImageResource(mrePhotoID[PhotoIndex]);
+    }
+
+    public void btnNextOnClick(View view) {
+        mrePhotoIndex = (mrePhotoIndex + 1) % mrePhotoID.length;
+        showPhoto(mrePhotoIndex);
+    }
+
+    public void btnPrevOnClick(View view) {
+        mrePhotoIndex = ((mrePhotoIndex - 1) >= 0 ? (mrePhotoIndex - 1) : 0) % mrePhotoID.length;
+        showPhoto(mrePhotoIndex);
     }
 }
