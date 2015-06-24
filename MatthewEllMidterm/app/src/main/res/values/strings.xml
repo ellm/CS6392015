@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MatthewEllMidterm</string>
+    <string name="hello_world">Convert Miles to Kilometers!</string>
+    <string name="action_settings">Settings</string>
+</resources>
